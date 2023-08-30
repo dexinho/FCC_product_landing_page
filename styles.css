@@ -1,17 +1,22 @@
 * {
     font-family: sans-serif;
 }
+
 :root {
     --background-color: #EEE;
+    --button-color: rgb(250, 215, 15);
 }
-body, .no-margin, .no-padding {
+
+body,
+.no-margin,
+.no-padding {
     margin: 0;
     padding: 0;
 }
 
 #page-wrapper {
     background-color: var(--background-color);
-    padding: 0.5em 2em;
+    padding: 0.5em 2em 3em 2em;
 }
 
 header {
@@ -19,35 +24,39 @@ header {
     top: 0;
     z-index: 999;
     display: grid;
+    width: 97%;
     grid-template-columns: 1fr 1fr;
     column-gap: 11em;
     height: 80px;
     background-color: var(--background-color);
 }
 
-#navbar {
+#nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#header-img-div {
     display: flex;
     align-items: center;
 }
-#logo {
-    display: flex;
-    align-items: center;
-}
-#logo img {
+
+#header-img-div img {
     display: inline-block;
     width: 300px;
 }
 
-#navbar ul {
+#nav-bar ul {
     list-style-type: none;
 }
 
-.nav-list-items {
+.nav-link-li {
     display: inline-block;
     margin: 0 1em;
 }
 
-.nav-list-items a {
+.nav-link-li a {
     font-size: 16px;
     color: black;
     text-decoration: none;
@@ -62,29 +71,34 @@ header {
     flex-wrap: wrap;
     gap: 1em;
 }
+
 h1 {
     text-align: center;
     width: 100%;
     margin: 0.2em 0 0.3em 0;
 }
 
-.input-div {
+.input-form {
     width: 100%;
     text-align: center;
 }
+
 .get-started-div {
     width: 100%;
     text-align: center;
+    margin-top: 1em;
 }
+
 #email {
     width: 250px;
     height: 2em;
     padding-left: 1em;
     padding-right: 1em;
 }
-.get-started-div button{
+
+.get-started-div input {
     color: black;
-    background-color: gold;
+    background-color: var(--button-color);
     border: 0;
     height: 2em;
     width: 150px;
@@ -113,14 +127,17 @@ h1 {
 #features .fa {
     color: rgb(255, 123, 0);
 }
+
 .bold {
     font-weight: bold;
 }
+
 .big-font {
     font-size: 25px;
 }
 
-.fa-div, .features-description{
+.fa-div,
+.features-description {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,6 +153,7 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
 #pricing {
     display: flex;
     justify-content: center;
@@ -143,9 +161,184 @@ h1 {
     margin-top: 5em;
     gap: 1em;
 }
+
 .pricing-info-div {
     width: 30%;
     max-width: 300px;
-    height: 250px;
     border: 1px solid black;
+}
+
+#pricing h4 {
+    background-color: #ddd;
+}
+
+#pricing h4,
+#pricing h2 {
+    display: block;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    padding-top: 1em;
+}
+
+#pricing ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+}
+
+#pricing li {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.select-button-div {
+    text-align: center;
+    width: 100%;
+}
+
+.select-button-div button:hover, #submit:hover{
+    transition: background-color 0.5s ease-in-out;
+    background-color: rgb(223, 161, 68);
+    cursor: pointer;
+}
+
+.select-button-div button {
+    width: 100px;
+    height: 40px;
+    color: black;
+    background-color: var(--button-color);
+    font-weight: bold;
+    border: 0;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+footer {
+    background-color: #ddd;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em 1em 0 1em;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+footer p {
+    color: rgb(70, 66, 66);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (width < 932px) {
+    header {
+        width: 99%;
+    }
+    #nav-bar {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #nav-bar li {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media (width < 800px) {
+    #pricing {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pricing-info-div {
+        margin: 0 auto;
+        width: 300px;
+    }
+}
+
+@media (width < 712px) {
+    #page-wrapper {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    #features {
+        row-gap: 5em;
+    }
+
+    .features-description-title {
+        text-align: center;
+    }
+
+    .fa-div {
+        display: none;
+    }
+
+    .features-parts-div {
+        grid-template-columns: 1fr;
+    }
+
+    .features-description-text {
+        text-align: center;
+    }
+
+    #header {
+        padding-top: 1em;
+        top: 0;
+        left: 0;
+        height: 140px;
+        width: 99.3%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #header-img-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        margin: 1em auto;
+    }
+    .get-started-section {
+        margin-top: 9em;
+    }
+    #nav-bar ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        gap: 0.3em;
+        padding-inline-start: 0;
+        margin-block-start: 0;
+    }
+    #nav-bar li {
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (width < 480px) {
+    #header {
+        width: 99%;
+    }
 }
