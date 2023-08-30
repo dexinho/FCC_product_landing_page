@@ -12,73 +12,107 @@
 
 <body>
     <div id="page-wrapper">
-        <header>
-            <div id="logo">
-                <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+        <header id="header">
+            <div id="header-img-div">
+                <img id="header-img"
+                    src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
                     alt="logo">
             </div>
-            <nav id="navbar">
+            <nav id="nav-bar">
                 <ul>
-                    <li class="nav-list-items"><a href="#features">Features</a></li>
-                    <li class="nav-list-items"><a href="#how_it_works">How It Works</a></li>
-                    <li class="nav-list-items"><a href="#pricing">Pricing</a></li>
+                    <li class="nav-link-li"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-link-li"><a class="nav-link" href="#how_it_works">How It Works</a></li>
+                    <li class="nav-link-li"><a class="nav-link" href="#pricing">Pricing</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section class="get-started-section">
                 <h1>Handcrafted, home-made masterpieces</h1>
-                <div class="input-div"><label for="email"><input type="email" name="email" id="email"
-                            placeholder='Enter your email address'> </label></div>
-                <div class='get-started-div'><button>GET STARTED</button></div>
+                <form action="https://www.freecodecamp.com/email-submit" id='form' class="input-form"><label for="email"><input type="email" name="email" id="email"
+                            placeholder='Enter your email address'> </label>
+                            <div class='get-started-div'><input type="submit" id="submit" value="GET STARTED"></div>
+                </form>
             </section>
             <section id="features">
                 <div class="features-parts-div">
                     <div class="fa-div"><i class="fa fa-3x fa-fire"></i></div>
                     <div class="features-description">
-                        <div class="bold big-font full-width no-margin">Premium Materials</div>
-                        <div class='full-width no-margin'>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase. </div>
+                        <div class="features-description-title bold big-font full-width no-margin">Premium Materials</div>
+                        <div class='features-description-text full-width no-margin'>Our trombones use the shiniest brass which is sourced locally.
+                            This will increase the longevity of your purchase. </div>
                     </div>
                 </div>
                 <div class="features-parts-div">
                     <div class="fa-div"><i class="fa fa-3x fa-truck"></i></div>
                     <div class="features-description">
-                        <div class="bold big-font full-width no-margin">Fast Shipping</div>
-                        <div class='full-width no-margin'>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied. </div>
+                        <div class="features-description-title bold big-font full-width no-margin">Fast Shipping</div>
+                        <div class='features-description-text full-width no-margin'>We make sure you recieve your trombone as soon as we have
+                            finished making it. We also provide free returns if you are not satisfied. </div>
                     </div>
                 </div>
                 <div class="features-parts-div">
                     <div class="fa-div"><i class="fa fa-3x fa-battery-full"></i></div>
                     <div class="features-description">
-                        <div class="bold big-font full-width no-margin">Quality Assurance</div>
-                        <div class='full-width no-margin'>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument. </div>
+                        <div class="features-description-title bold big-font full-width no-margin">Quality Assurance</div>
+                        <div class='features-description-text full-width no-margin'>For every purchase you make, we will ensure there are no
+                            damages or faults and we will check and test the pitch of your instrument. </div>
                     </div>
                 </div>
             </section>
             <section id="how_it_works">
-                <iframe id="video"
-                src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0"
+                <iframe id="video" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0"
                     frameborder="0" width='600px' height="300px"> </iframe>
             </section>
             <section id="pricing">
                 <div class="pricing-info-div">
-                    <h3>TENOR TROMBONE</h3>
-                    <h2>$600</h2>
+                    <h4 class="no-margin">TENOR TROMBONE</h4>
+                    <h2 class="no-margin">$600</h2>
+                    <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum</li>
+                    </ul>
+                    <div class="select-button-div"><button>SELECT</button></div>
                 </div>
                 <div class="pricing-info-div">
-                    <h3>BASS TROMBONE</h3>
-                    <h2>$900</h2>
+                    <h4 class="no-margin">BASS TROMBONE</h4>
+                    <h2 class="no-margin">$900</h2>
+                    <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum</li>
+                    </ul>
+                    <div class="select-button-div"><button>SELECT</button></div>
                 </div>
                 <div class="pricing-info-div">
-                    <h3>VALVE TROMBONE</h3>
-                    <h2>$1200</h2>
+                    <h4 class="no-margin">VALVE TROMBONE</h4>
+                    <h2 class="no-margin">$1200</h2>
+                    <ul>
+                        <li>Plays similar to Trumpet</li>
+                        <li>Great for Jazz Bands</li>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum</li>
+                    </ul>
+                    <div class="select-button-div"><button>SELECT</button></div>
                 </div>
             </section>
         </main>
-        <footer>
-
-        </footer>
     </div>
+    <footer>
+        <div>
+            <div>
+                <ul class="no-margin">
+                    <li><a href="#page-wrapper">Privacy</a></li>
+                    <li><a href="#page-wrapper">Terms</a></li>
+                    <li><a href="#page-wrapper">Contact</a></li>
+                </ul>
+            </div>
+            <p>Copyright 2016, Original Trombones</p>
+        </div>
+    </footer>
 </body>
 
 </html>
